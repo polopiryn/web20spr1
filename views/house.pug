@@ -1,0 +1,16 @@
+hr
+.card-header
+  h5.card-title="Nazwa:"+  house.name
+.card-body  
+  .div.row
+    .div.col-3
+      img(src='/images/logo.svg', width='70', height='70', alt='')
+    .div.col-9
+      p.card-text 
+        ="Lokacja: "+  house.city + " " + house.address
+        br
+        ="Powierzchnia: "+ house.houseSize + "m2"
+        br
+        ="Cena: "+ house.price +"pln"
+  hr
+  a.btn.btn-primary.col-12(href='/api/house/'+house._id)= "Zobacz"

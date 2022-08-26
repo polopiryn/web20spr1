@@ -1,0 +1,20 @@
+extends layout
+
+block content  
+  table.table
+    thead.bg-info.text-white
+      tr 
+        th Zad.
+        th Wykonana funkcjonalność w aplikacji
+    tbody
+      each val, index in zadania
+        tr
+          td= index+1
+          td
+            strong= val.header
+            p= val.body
+              if val.links
+                br
+                each link in val.links
+                  a(href=link)= link
+                  span &nbsp;

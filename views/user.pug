@@ -1,0 +1,16 @@
+hr
+.card-header
+  h5.card-title.text-center="Użytkownik: "+ user.username
+.card-body  
+  .div.row
+    .div.col-3
+      img(src='/images/logo.svg', width='70', height='70', alt='')
+    .div.col-9
+      p="ID: "+ user._Id
+            p="Nazwa: "+user.username
+            p="Haslo: "+user.password
+            p="email: "+user.email
+            p="Czy admin: "+user.admin
+            p="Aktywny: "+user.active
+  hr
+  

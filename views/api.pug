@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h4 /api/house
+  ul
+    li get - Wszystkie domy - token nie jest wymagany
+    li post - Dodanie nowego samochodu
+  h4 /api/house/:id
+  ul
+    li get - Pobranie danych jednego domu - token nie jest wymagany
+    li put - Zaktualizowanie jednego domu
+    li delete - Usunięcie jednego domu
+  h4 Wszystkie domy:
+  include houses

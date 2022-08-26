@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    .row
+    if users
+        .row 
+            each user in users
+                .col-4       
+                    .card
+                        include user
+
+
+
+
+    
+    

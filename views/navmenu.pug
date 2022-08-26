@@ -1,0 +1,32 @@
+nav.navbar.navbar-expand-md.navbar-dark.bg-info.sticky-top
+  .container
+    a.navbar-brand(href='/')
+      img.d-inline-block.align-top(src='/images/logo.svg', width='30', height='30', alt='')
+      |  Web2.0
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNavDropdown.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link.text-light(href='/session') Sesja
+        li.nav-item.dropdown
+          a#navbarDropdownMenuLink.nav-link.text-light.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | REST API
+          .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+            a.dropdown-item(href='/api') API Houses
+            a.dropdown-item(href='/users/token') Token
+        li.nav-item.dropdown
+          a#navbarDropdownMenuLink.text-light.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | Tylko dla zalogowanych
+          .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+            a.dropdown-item(href='/users') Users
+            a.dropdown-item(href='/logged') Zalogowany
+            form.form-inline
+        li.nav-item
+          a.text-light.nav-link(href='/users/reset') Reset użytkowników
+    if logInfo == 'Not logged'
+      a.btn.btn-outline-light.mr-2(href='/login', role='button') Zaloguj 
+      a.btn.btn-outline-light(href='/register', role='button') Zarejestruj
+    else
+      span.navbar-text.mr-2= logInfo
+      a.btn.btn-outline-light(href='/logout', role='button') Wyloguj

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  form(action="/register", method="post")
+    .form-group.row
+      label.col-sm-2.col-form-label(for='login') Login
+      .col-sm-10
+        input#login.form-control(type='login' name="username" placeholder='Login' value=username)
+    .form-group.row
+      label.col-sm-2.col-form-label(for='password') Hasło
+      .col-sm-10
+        input#password.form-control(type='password' name="password" placeholder='Hasło')
+    .form-group.row
+      label.col-sm-2.col-form-label(for='email') Email
+      .col-sm-10.input-group.mb-3
+        .input-group-prepend
+          span#basic-addon1.input-group-text @
+        input#email.form-control(type='email' name="email" placeholder='Email' value=email)
+    .form-group.row
+      .offset-sm-2.col-sm-10
+        button.btn.btn-primary(type='submit') Zarejestruj

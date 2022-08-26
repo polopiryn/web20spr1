@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  form(action="/login?redirect="+redirect, method="post")
+    .form-group.row
+      label.col-sm-2.col-form-label(for='login') Login
+      .col-sm-10
+        input#login.form-control(type='login' name="username" placeholder='Login')
+    .form-group.row
+      label.col-sm-2.col-form-label(for='password') Hasło
+      .col-sm-10
+        input#password.form-control(type='password' name="password" placeholder='Hasło')
+    .form-group.row
+      .offset-sm-2.col-sm-10
+        button.btn.btn-primary(type='submit') Zaloguj
