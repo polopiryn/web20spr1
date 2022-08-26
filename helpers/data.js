@@ -34,7 +34,7 @@ var zadania = [
     {
       header: 'Aplikacja działająca online',
       body: 'Aplikacja działa online pod adresem: ',
-      links: ['']
+      links: ['https://homenode.herokuapp.com']
     },
   ]
   

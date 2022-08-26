@@ -13,12 +13,12 @@ router.get('/activation-email/:id', (req, res) => {
         from: `"Student Web 2.0" `,
         to: data.email,
         subject: `Aktywacja konta`,
-        text: `Wjedź na stronę https://users/activate/${req.params.id} by aktywować konto`,
+        text: `Wjedź na stronę https://homenode.herokuapp.com/users/activate/${req.params.id} by aktywować konto`,
         html: `<h1>Student Web 2.0</h1>
         <b>Klikni w link aby aktywować</b>
         <p>
-          <a href="https://users/activate/${req.params.id}">
-            https://users/activate/${req.params.id}
+          <a href="https://homenode.herokuapp.com/users/activate/${req.params.id}">
+          https://homenode.herokuapp.com/users/activate/${req.params.id}
           </a>
         </p>`
       }

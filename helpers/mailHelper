@@ -2,11 +2,11 @@ const nodemailer = require('nodemailer')
 
 let config = {
   host: 'smtp.gmail.com',
-  port:  465,
+  port:  587,
   secure: true,
   auth: {
-    user: 'barwoj0@homepl.pl',
-    pass: 'zaq1@WSX'
+    user: 'PracaMailTestSLX',
+    pass: 'ajsgyifnxpiuglw'
   },
   tls: {
     rejectUnauthorized: false
