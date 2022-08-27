@@ -1,7 +1,7 @@
 var zadania = [
     {
       header: 'Prosta aplikacja wykorzystująca trasowanie (rooting), podział na moduły',
-      body: `Cztery trasy i cztery moduły.`
+      body: `Cztery trasy i moduły.`
     },
     {
       header: 'Wykorzystanie silnika szablonów',
@@ -9,7 +9,7 @@ var zadania = [
     },
     {
       header: 'Przygotowanie prostego REST API',
-      body: 'Wykonane zostało proste api dla samochodów.',
+      body: 'Wykonane zostało proste api dla domów.',
       links: ['/api']
     },
     {

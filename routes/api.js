@@ -1,8 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const expressJWT = require('express-jwt')
+const { expressjwt: jwt } = require("express-jwt");
 const { House } = require('../helpers/dbHelper')  
   
+router.use(jwt({ secret: 'barwoj',algorithms: ['RS256'] }).unless({ path: [
+    { url: '/api', methods: ['GET', 'OPTIONS'] },      
+    { url: '/api/house', methods: ['GET', 'OPTIONS'] },
+    { url: /\/api\/house.*/, methods: ['GET', 'OPTIONS'] }       
+]}))
 
 
 router.get('/', (req, res) => {
@@ -20,6 +25,8 @@ router.get('/house', (req, res) => {
 })
 
 router.post('/house',(req,res) =>{
+
+
 var newHouse = new House({
     "name":req.body.name,
     "city":req.body.city,

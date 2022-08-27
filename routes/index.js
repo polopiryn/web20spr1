@@ -60,9 +60,12 @@ router.post('/register', (req, res) => {
 })
 
 router.get('/logout', (req, res) => {
-  req.logout()
-  res.redirect('/')
-})
+  req.logout(function(err) {
+    if (err) {
+       console.log(err); 
+    }
+    res.redirect('/');
+})})
 
 router.get('/session', (req, res, next) => {
   if(req.session.odwiedziny)

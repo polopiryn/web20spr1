@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const { tTransporter } = require('../utils/mailHelper')
-const { User } = require('../utils/db')
+const { tTransporter } = require('../helpers/mailHelper')
+const { User } = require('../helpers/dbHelper')
 
 router.get('/activation-email/:id', (req, res) => {
   User.findOne({ _id: req.params.id }, (err, data) => {
@@ -24,9 +24,12 @@ router.get('/activation-email/:id', (req, res) => {
       }
 
       tTransporter.sendMail(mailOptions, (error, info) => {
-        if (error) res.render('index', {
-          error: 'Problem z wysłaniem maila aktywacyjnego. Powiadom administatora strony.'
-        })
+        if (error){
+          console.log(error)
+          res.render('index', {         
+            error: 'Problem z wysłaniem maila aktywacyjnego. Powiadom administatora strony.'
+          })
+        } 
         else res.render('index', {
           info: 'Na adres e-mail wysłany został link aktywacyjny'
         })
