@@ -1,21 +1,12 @@
 var zadania = [
     {
-      header: 'Prosta aplikacja wykorzystująca trasowanie (rooting), podział na moduły',
-      body: `Cztery trasy i moduły.`
+      header: 'Opis sprawozdania w pliku PDF',
+      body: `Zrobione.`
     },
     {
-      header: 'Wykorzystanie silnika szablonów',
-      body: 'Wykorzystany został pug.'
-    },
-    {
-      header: 'Przygotowanie prostego REST API',
-      body: 'Wykonane zostało proste api dla domów.',
+      header: 'Przygotowanie prostego REST API, np. za pomocą pakietu mongoose',
+      body: `Zrobione.`,
       links: ['/api']
-    },
-    {
-      header: 'Wykorzystanie sesji i logowania za pomocą passport',
-      body: 'Tylko zalogowany użytkownik ma dostęp do:',
-      links: ['/users/token', '/users', '/logged', '/logout']
     },
     {
       header: 'Wykorzystanie JSON Web Token',
@@ -23,19 +14,37 @@ var zadania = [
       links: ['/users/token', '/api']
     },
     {
+      header: 'Wykorzystanie silnika szablonów',
+      body: 'Wykorzystany został pug.'
+    },
+    {
+      header: 'Rejestracja użytkownika',
+      body: 'passport - tylko zalogowany użytkownik ma dostęp do:',
+      links: ['/users/token', '/users', '/logged', '/logout']
+    },
+    {
+      header: 'Zrobienie prostego panelu administratora',
+      body: 'zrobiono częściowo - reset uzytkowników w bazie'
+    }, 
+    {
       header: 'Rejestracja z potwierdzeniem aktywacji konta przez e-mail',
       body: 'Po pomyślnej rejstracji automatycznie wysyłany jest mail',
       links: ['/register', '/mail/activation-email/:id', ]
-    },
+    }, 
     {
-      header: 'Wykorzystanie Bootstrapa',
-      body: 'Jak widać jest wykorzystany',
+      header: 'Wykorzystanie Bootstrapa lub innego frameworka CSS, coś z RWD',
+      body: 'zrobiono - Bootstrap'
     },
     {
       header: 'Aplikacja działająca online',
       body: 'Aplikacja działa online pod adresem: ',
       links: ['https://homenode.herokuapp.com']
     },
+    {
+      header: 'Uwierzytelnienie za pomocą konta Google czy innego portalu',
+      body: 'pominięto całkowicie'
+    }
+   
   ]
   
   module.exports = {
