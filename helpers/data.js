@@ -21,11 +21,7 @@ var zadania = [
       header: 'Rejestracja użytkownika',
       body: 'passport - tylko zalogowany użytkownik ma dostęp do:',
       links: ['/users/token', '/users', '/logged', '/logout']
-    },
-    {
-      header: 'Zrobienie prostego panelu administratora',
-      body: 'zrobiono częściowo - reset uzytkowników w bazie'
-    }, 
+    },     
     {
       header: 'Rejestracja z potwierdzeniem aktywacji konta przez e-mail',
       body: 'Po pomyślnej rejstracji automatycznie wysyłany jest mail',
